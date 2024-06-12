@@ -44,4 +44,17 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- OCaml settings
+vim.api.nvim_create_augroup("OCamlSettings", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = "OCamlSettings",
+	pattern = "ocaml",
+	callback = function()
+		vim.bo.tabstop = 2
+		vim.bo.softtabstop = 2
+		vim.bo.shiftwidth = 2
+		vim.bo.expandtab = false
+	end,
+})
+
 -- vim: ts=2 sts=2 sw=2 et
