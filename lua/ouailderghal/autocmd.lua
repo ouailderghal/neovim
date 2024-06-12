@@ -8,9 +8,9 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 -- Go settings
-vim.api.nvim_create_augroup("GoSettings", { clear = true })
+local go_group = vim.api.nvim_create_augroup("go_group", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
-	group = "GoSettings",
+	group = go_group,
 	pattern = "go",
 	callback = function()
 		vim.bo.tabstop = 2
@@ -21,9 +21,9 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- Make settings
-vim.api.nvim_create_augroup("GoSettings", { clear = true })
+local make_group = vim.api.nvim_create_augroup("make_group", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
-	group = "GoSettings",
+	group = make_group,
 	pattern = "make",
 	callback = function()
 		vim.bo.tabstop = 2
@@ -34,7 +34,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- Markdown settings
-local markdown_group = vim.api.nvim_create_augroup("markdown_settings", { clear = true })
+local markdown_group = vim.api.nvim_create_augroup("markdown_group", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
 	group = markdown_group,
 	pattern = "markdown",
@@ -45,15 +45,15 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- OCaml settings
-vim.api.nvim_create_augroup("OCamlSettings", { clear = true })
+local ocaml_group = vim.api.nvim_create_augroup("ocaml_group", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
-	group = "OCamlSettings",
+	group = ocaml_group,
 	pattern = "ocaml",
 	callback = function()
 		vim.bo.tabstop = 2
 		vim.bo.softtabstop = 2
 		vim.bo.shiftwidth = 2
-		vim.bo.expandtab = false
+		vim.bo.expandtab = true
 	end,
 })
 
