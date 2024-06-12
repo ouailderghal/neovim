@@ -1,5 +1,8 @@
 require("ouailderghal")
 
+-- Set colorscheme
+vim.cmd.colorscheme("slate")
+
 -- Install `lazy.nvim` plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

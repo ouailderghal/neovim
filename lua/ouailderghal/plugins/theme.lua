@@ -1,6 +1,9 @@
 return {
 	"Shatur/neovim-ayu",
+
+	cond = false,
 	priority = 1000,
+
 	init = function()
 		vim.cmd.colorscheme("ayu")
 		vim.opt.background = "dark"
