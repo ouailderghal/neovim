@@ -20,6 +20,19 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- Make settings
+vim.api.nvim_create_augroup("GoSettings", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = "GoSettings",
+	pattern = "make",
+	callback = function()
+		vim.bo.tabstop = 2
+		vim.bo.softtabstop = 2
+		vim.bo.shiftwidth = 2
+		vim.bo.expandtab = false
+	end,
+})
+
 -- Markdown settings
 local markdown_group = vim.api.nvim_create_augroup("markdown_settings", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
