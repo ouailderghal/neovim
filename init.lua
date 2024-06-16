@@ -1,7 +1,8 @@
 require("ouailderghal")
 
 -- Set colorscheme
-vim.cmd.colorscheme("slate")
+-- vim.cmd.colorscheme("slate")
+vim.cmd.colorscheme("gruber-darker")
 
 -- Install `lazy.nvim` plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
