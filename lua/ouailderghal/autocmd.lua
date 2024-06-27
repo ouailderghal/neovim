@@ -57,4 +57,17 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- Bash settings
+local bash_group = vim.api.nvim_create_augroup("bash_group", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = bash_group,
+	pattern = "ocaml",
+	callback = function()
+		vim.bo.tabstop = 2
+		vim.bo.softtabstop = 2
+		vim.bo.shiftwidth = 2
+		vim.bo.expandtab = true
+	end,
+})
+
 -- vim: ts=2 sts=2 sw=2 et

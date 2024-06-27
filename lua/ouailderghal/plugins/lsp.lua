@@ -76,6 +76,7 @@ return {
 			jsonls = {},
 			texlab = {},
 			bashls = {},
+			ocamllsp = {},
 
 			lua_ls = {
 				settings = {
