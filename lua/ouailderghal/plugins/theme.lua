@@ -1,13 +1,9 @@
 return {
-	"Shatur/neovim-ayu",
-
-	cond = false,
+	"navarasu/onedark.nvim",
+	lazy = false,
 	priority = 1000,
-
-	init = function()
-		vim.cmd.colorscheme("ayu")
-		vim.opt.background = "dark"
-		vim.cmd.hi("Comment gui=none")
+	config = function()
+		vim.cmd([[ colorscheme onedark ]])
 	end,
 }
 
