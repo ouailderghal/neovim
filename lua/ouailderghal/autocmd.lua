@@ -70,4 +70,17 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- TypeScript settings
+local ts_group = vim.api.nvim_create_augroup("ts_group", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = ts_group,
+	pattern = "typescript",
+	callback = function()
+		vim.bo.tabstop = 4
+		vim.bo.softtabstop = 4
+		vim.bo.shiftwidth = 4
+		vim.bo.expandtab = true
+	end,
+})
+
 -- vim: ts=2 sts=2 sw=2 et
