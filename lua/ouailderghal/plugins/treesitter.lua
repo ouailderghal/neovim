@@ -17,10 +17,8 @@ return {
 			"c",
 			"cpp",
 			"python",
-			"latex",
 			"terraform",
 			"bash",
-			"latex",
 			"markdown",
 		},
 
