@@ -1,10 +1,10 @@
 return {
-	"folke/tokyonight.nvim",
+	"ellisonleao/gruvbox.nvim",
 	lazy = false,
 	priority = 1000,
-	cond = false,
+	cond = true,
 	config = function()
-		vim.cmd([[ colorscheme tokyonight ]])
+		vim.cmd([[ colorscheme gruvbox ]])
 	end,
 }
 

@@ -19,7 +19,6 @@ require("lazy").setup({
 	{ "numToStr/Comment.nvim", opts = {} }, -- "gc" to comment visual regions/lines
 
 	{ import = "ouailderghal.plugins" },
-	{ import = "ouailderghal.plugins.themes" },
 }, { ui = {} })
 
 -- vim: ts=2 sts=2 sw=2 et

@@ -83,4 +83,28 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- Javascript settings
+local js_group = vim.api.nvim_create_augroup("js_group", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = js_group,
+	pattern = "javascript",
+	callback = function()
+		vim.bo.tabstop = 4
+		vim.bo.softtabstop = 4
+		vim.bo.shiftwidth = 4
+		vim.bo.expandtab = true
+	end,
+})
+
+-- LaTeX settings
+local latex_group = vim.api.nvim_create_augroup("latex_group", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = latex_group,
+	pattern = "tex",
+	callback = function()
+		vim.opt_local.textwidth = 80
+		vim.opt_local.colorcolumn = "80"
+	end,
+})
+
 -- vim: ts=2 sts=2 sw=2 et

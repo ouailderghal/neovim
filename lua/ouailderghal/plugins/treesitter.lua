@@ -20,6 +20,9 @@ return {
 			"terraform",
 			"bash",
 			"markdown",
+			"javascript",
+			"typescript",
+			"latex",
 		},
 
 		highlight = {
