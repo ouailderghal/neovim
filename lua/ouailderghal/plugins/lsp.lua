@@ -69,14 +69,15 @@ return {
 			clangd = {},
 			tsserver = {},
 			html = { filetypes = { "html" } },
-			dockerls = {},
 			docker_compose_language_service = {},
+      dockerls = {},
 			ansiblels = {},
 			yamlls = {},
 			jsonls = {},
 			texlab = {},
 			bashls = {},
 			ocamllsp = {},
+      intelephense = {},
 
 			lua_ls = {
 				settings = {
