@@ -1,11 +1,11 @@
 -- vim: ts=2 sts=2 sw=2 et
 
 return {
-  "ellisonleao/gruvbox.nvim",
+	"EdenEast/nightfox.nvim",
 	lazy = false,
 	priority = 1000,
-	cond = false,
+	cond = true,
 	config = function()
-		vim.cmd([[ colorscheme gruvbox ]])
+		vim.cmd([[ colorscheme nightfox ]])
 	end,
 }
