@@ -70,14 +70,14 @@ return {
 			tsserver = {},
 			html = { filetypes = { "html" } },
 			docker_compose_language_service = {},
-      dockerls = {},
+			dockerls = {},
 			ansiblels = {},
 			yamlls = {},
 			jsonls = {},
 			texlab = {},
 			bashls = {},
 			ocamllsp = {},
-      intelephense = {},
+			phpactor = {},
 
 			lua_ls = {
 				settings = {
