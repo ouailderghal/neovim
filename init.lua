@@ -17,6 +17,7 @@ require("lazy").setup({
 	"lervag/vimtex", -- LaTeX
 	"aklt/plantuml-syntax", -- PLantUML Syntax
 	{ "numToStr/Comment.nvim", opts = {} }, -- "gc" to comment visual regions/lines
+	"apple/pkl-neovim",
 
 	{ import = "ouailderghal.plugins" },
 	{ import = "ouailderghal.plugins.themes" },
