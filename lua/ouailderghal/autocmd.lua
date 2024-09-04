@@ -20,6 +20,19 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- YAML settings
+local yaml_group = vim.api.nvim_create_augroup("yaml_group", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = yaml_group,
+	pattern = "yaml",
+	callback = function()
+		vim.bo.tabstop = 2
+		vim.bo.softtabstop = 2
+		vim.bo.shiftwidth = 2
+		vim.bo.expandtab = true
+	end,
+})
+
 -- Make settings
 local make_group = vim.api.nvim_create_augroup("make_group", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
