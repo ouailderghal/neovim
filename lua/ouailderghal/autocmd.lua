@@ -43,6 +43,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"typescript",
 		"javascript",
 		"python",
+		"php",
 	},
 	callback = function()
 		set_indent(4, true)
@@ -60,6 +61,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"typescript",
 		"javascript",
 		"python",
+		"php",
 	},
 	callback = function()
 		set_textwidth(120)
