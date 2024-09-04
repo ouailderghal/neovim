@@ -44,6 +44,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"javascript",
 		"python",
 		"php",
+		"pkl",
 	},
 	callback = function()
 		set_indent(4, true)
@@ -76,6 +77,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"org",
 		"dockerfile",
 		"make",
+		"pkl",
 	},
 	callback = function()
 		set_textwidth(80)
