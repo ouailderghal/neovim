@@ -23,6 +23,7 @@ return {
 			"javascript",
 			"typescript",
 			"latex",
+			"php",
 		},
 
 		highlight = {
