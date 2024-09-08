@@ -6,8 +6,8 @@ return {
 			local lint = require("lint")
 			lint.linters_by_ft = {
 				-- markdown = { "markdownlint" },
-				dockerfile = { "hadolint" },
-				python = { "flake8" },
+				-- dockerfile = { "hadolint" },
+				-- python = { "flake8" },
 			}
 
 			-- Linting autocmd
