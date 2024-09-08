@@ -68,8 +68,6 @@ return {
 			clangd = {},
 			tsserver = {},
 			html = { filetypes = { "html" } },
-			docker_compose_language_service = {},
-			dockerls = {},
 			ansiblels = {},
 			yamlls = {},
 			jsonls = {},
@@ -95,8 +93,6 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua",
-			"markdownlint",
-			"hadolint",
 			"flake8",
 		})
 
