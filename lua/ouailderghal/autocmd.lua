@@ -24,11 +24,11 @@ vim.api.nvim_create_autocmd("TermOpen", {
 vim.api.nvim_create_autocmd("FileType", {
 	group = indent_group,
 	pattern = {
+		"make",
 		"go",
 		"yaml",
 		"ocaml",
 		"bash",
-		"make",
 		"dockerfile",
 		"lua",
 	},
