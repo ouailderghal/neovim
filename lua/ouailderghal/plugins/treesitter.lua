@@ -1,4 +1,3 @@
--- vim: ts=2 sts=2 sw=2 et
 -- Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
 -- Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 -- Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
