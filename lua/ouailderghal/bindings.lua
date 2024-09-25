@@ -40,3 +40,6 @@ vim.keymap.set("n", "<leader>zZ", function()
 	vim.wo.rnu = false
 	vim.opt.colorcolumn = "0"
 end)
+
+-- Toggle between relative and normal line numbers
+vim.api.nvim_set_keymap('n', '<F9>', ':set relativenumber!<CR>', { noremap = true, silent = true })
