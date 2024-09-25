@@ -41,5 +41,9 @@ vim.keymap.set("n", "<leader>zZ", function()
 	vim.opt.colorcolumn = "0"
 end)
 
--- Toggle between relative and normal line numbers
+vim.api.nvim_set_keymap('n', '<leader>le', ':set spell spelllang=en_us<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>lf', ':set spell spelllang=fr<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ll', ':set nospell <CR>', { noremap = true, silent = true })
+
+-- F9 to toggle between relative and normal line numbers
 vim.api.nvim_set_keymap('n', '<F9>', ':set relativenumber!<CR>', { noremap = true, silent = true })
