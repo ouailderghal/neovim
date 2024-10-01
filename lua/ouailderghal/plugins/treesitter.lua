@@ -23,6 +23,9 @@ return {
 			"typescript",
 			"latex",
 			"php",
+			"ocaml",
+			"dockerfile",
+			"java",
 		},
 
 		highlight = {
