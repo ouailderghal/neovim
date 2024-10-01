@@ -5,13 +5,7 @@ local function set_indent(tabstop, expandtab)
 	vim.bo.expandtab = expandtab
 end
 
-local function set_textwidth(width)
-	vim.opt_local.textwidth = width
-	vim.opt_local.colorcolumn = tostring(width)
-end
-
 local indent_group = vim.api.nvim_create_augroup("indent_group", { clear = true })
-local textwidth_group = vim.api.nvim_create_augroup("textwidth_group", { clear = true })
 
 vim.api.nvim_create_autocmd("TermOpen", {
 	pattern = "*",
@@ -48,38 +42,5 @@ vim.api.nvim_create_autocmd("FileType", {
 	},
 	callback = function()
 		set_indent(4, true)
-	end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-	group = textwidth_group,
-	pattern = {
-		"go",
-		"yaml",
-		"ocaml",
-		"bash",
-		"lua",
-		"typescript",
-		"javascript",
-		"python",
-		"php",
-	},
-	callback = function()
-		set_textwidth(120)
-	end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-	group = textwidth_group,
-	pattern = {
-		"markdown",
-		"tex",
-		"org",
-		"dockerfile",
-		"make",
-		"pkl",
-	},
-	callback = function()
-		set_textwidth(80)
 	end,
 })
