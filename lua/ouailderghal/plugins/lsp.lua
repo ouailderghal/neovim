@@ -73,7 +73,6 @@ return {
 			jsonls = {},
 			texlab = {},
 			bashls = {},
-			ocamllsp = {},
 			intelephense = {},
 
 			lua_ls = {
