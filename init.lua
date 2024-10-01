@@ -22,5 +22,3 @@ require("lazy").setup({
 	{ import = "ouailderghal.plugins" },
 	{ import = "ouailderghal.plugins.themes" },
 }, { ui = {} })
-
--- vim: ts=2 sts=2 sw=2 et
