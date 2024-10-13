@@ -27,10 +27,5 @@ vim.bo.tabstop = 4
 vim.bo.softtabstop = 4
 vim.bo.shiftwidth = 4
 vim.bo.expandtab = true
-
-local function set_textwidth(width)
-	vim.opt_local.textwidth = width
-	vim.opt_local.colorcolumn = tostring(width)
-end
-
-set_textwidth(80)
+vim.opt.textwidth = 80
+vim.opt.colorcolumn = "80"
