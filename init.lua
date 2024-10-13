@@ -20,5 +20,4 @@ require("lazy").setup({
 	"apple/pkl-neovim",
 
 	{ import = "ouailderghal.plugins" },
-	{ import = "ouailderghal.plugins.themes" },
 }, { ui = {} })
