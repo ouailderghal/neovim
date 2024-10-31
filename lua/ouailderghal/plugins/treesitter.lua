@@ -22,9 +22,9 @@ return {
 			"javascript",
 			"typescript",
 			"latex",
-			"php",
+			{ "php", version = "0.23.0"},
 			"ocaml",
-			"dockerfile",
+			{ "dockerfile", version = "v0.2.0" },
 			"java",
 		},
 
