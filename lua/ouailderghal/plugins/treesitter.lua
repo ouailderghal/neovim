@@ -6,6 +6,7 @@ return {
 	build = ":TSUpdate",
 	opts = {
 		auto_install = true,
+		additional_vim_regex_highlighting = true,
 		ensure_installed = {
 			"lua",
 			"luadoc",
