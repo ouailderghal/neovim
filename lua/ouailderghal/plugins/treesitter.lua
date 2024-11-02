@@ -5,7 +5,8 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	opts = {
-		auto_install = true,
+		auto_install = false,
+		auto_sync = false,
 		additional_vim_regex_highlighting = true,
 		ensure_installed = {
 			"lua",
@@ -23,14 +24,17 @@ return {
 			"javascript",
 			"typescript",
 			"latex",
-			{ "php", version = "0.23.0"},
+			"php",
 			"ocaml",
-			{ "dockerfile", version = "v0.2.0" },
+			"dockerfile",
 			"java",
+			"json",
+			"yaml",
 		},
 
 		highlight = { enable = true },
 		indent = { enable = true },
+		textobjects = { enable = true },
 
 		incremental_selection = {
 			enable = true,
