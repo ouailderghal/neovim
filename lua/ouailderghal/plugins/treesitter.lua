@@ -33,7 +33,7 @@ return {
 		},
 
 		highlight = { enable = true },
-		indent = { enable = true },
+		indent = { enable = false },
 		textobjects = { enable = true },
 
 		incremental_selection = {
