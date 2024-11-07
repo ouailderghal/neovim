@@ -48,7 +48,7 @@ vim.api.nvim_set_keymap('n', '<leader>ll', ':set nospell <CR>', opts)
 vim.api.nvim_set_keymap('n', '<F9>', ':set relativenumber!<CR>', opts)
 
 -- Tabs
-keymap.set("n", "te", ":tabedit<Return>")
-keymap.set("n", "tc", ":tabclose<Return>")
+keymap.set("n", "<leader>te", ":tabedit<Return>")
+keymap.set("n", "<leader>td", ":tabclose<Return>")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
