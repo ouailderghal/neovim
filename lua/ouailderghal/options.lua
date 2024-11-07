@@ -28,3 +28,6 @@ vim.bo.softtabstop = 4
 vim.bo.shiftwidth = 4
 vim.bo.expandtab = true
 vim.opt.colorcolumn = "80"
+vim.opt.smartindent = false
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true 
