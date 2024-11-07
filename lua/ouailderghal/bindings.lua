@@ -1,49 +1,54 @@
+local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
+
+-- Toggles between focus and zen modes using the zen-mode plugin
+-- @param mode (string) The mode to toggle ("focus" or "zen")
+local function toggle_zen_mode(mode)
+    local zen = require("zen-mode")
+    zen.setup({
+        window = {
+            width = 80,
+            options = {}
+        }
+    })
+
+    vim.wo.wrap = false
+    vim.wo.rnu = false
+
+    if mode == "focus" then
+        vim.wo.number = true
+        zen.toggle()
+    elseif mode == "zen" then
+        vim.wo.number = false
+        vim.opt.colorcolumn = "0"
+        zen.toggle()
+    else
+        error("Invalid mode specified. Use 'focus' or 'zen'.")
+    end
+end
+
 -- Diagnostic bindings
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+keymap.set("n", "[d", vim.diagnostic.goto_prev)
+keymap.set("n", "]d", vim.diagnostic.goto_next)
+keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
 -- Exit terminal mode in the builtin terminal binding
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
-
--- Faster split navigation bindings
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>")
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>")
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>")
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>")
+keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 
 -- Zen mode
-vim.keymap.set("n", "<leader>zz", function()
-	require("zen-mode").setup({
-		window = {
-			width = 90,
-			options = {},
-		},
-	})
-	require("zen-mode").toggle()
-	vim.wo.wrap = false
-	vim.wo.number = true
-	vim.wo.rnu = false
-end)
+keymap.set("n", "<leader>zz", function() toggle_zen_mode("focus") end)
+keymap.set("n", "<leader>zZ", function() toggle_zen_mode("zen") end)
 
-vim.keymap.set("n", "<leader>zZ", function()
-	require("zen-mode").setup({
-		window = {
-			width = 80,
-			options = {},
-		},
-	})
-	require("zen-mode").toggle()
-	vim.wo.wrap = false
-	vim.wo.number = false
-	vim.wo.rnu = false
-	vim.opt.colorcolumn = "0"
-end)
-
-vim.api.nvim_set_keymap('n', '<leader>le', ':set spell spelllang=en_us<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>lf', ':set spell spelllang=fr<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>ll', ':set nospell <CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>le', ':set spell spelllang=en_us<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>lf', ':set spell spelllang=fr<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>ll', ':set nospell <CR>', opts)
 
 -- F9 to toggle between relative and normal line numbers
-vim.api.nvim_set_keymap('n', '<F9>', ':set relativenumber!<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F9>', ':set relativenumber!<CR>', opts)
+
+-- Tabs
+keymap.set("n", "te", ":tabedit<Return>")
+keymap.set("n", "tc", ":tabclose<Return>")
+keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
