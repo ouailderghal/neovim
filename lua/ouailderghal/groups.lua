@@ -166,5 +166,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
   callback = function()
     vim.wo.number = false
     vim.wo.relativenumber = false
+    vim.opt.cursorline = false
+    vim.opt.cursorcolumn = false
   end,
 })
