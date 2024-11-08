@@ -62,11 +62,10 @@ keymap.set("n", "<leader>le", ":set spell spelllang=en_us<cr>", opts)
 keymap.set("n", "<leader>lf", ":set spell spelllang=fr<cr>", opts)
 keymap.set("n", "<leader>ll", ":set nospell<cr>", opts)
 
-keymap.set('n', '<Leader>tt', ':split term://bash<CR>', opts)
-keymap.set('n', '<Leader>vt', ':vsplit term://bash<CR>', opts)
+-- Terminal keybindings
+keymap.set("n", "<Leader>tt", ":split term://bash<CR>", opts)
+keymap.set("n", "<Leader>tv", ":vsplit term://bash<CR>", opts)
+keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 
 -- Toggle relative line number
 keymap.set("n", "<F12>", ":set relativenumber!<cr>", opts)
-
--- Exit terminal mode 
-keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
