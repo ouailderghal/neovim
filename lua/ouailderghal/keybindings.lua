@@ -69,3 +69,9 @@ keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 
 -- Toggle relative line number
 keymap.set("n", "<F12>", ":set relativenumber!<cr>", opts)
+
+-- Compile project
+keymap.set("n", "<leader>pc", ":Compile<cr>")
+
+
+
