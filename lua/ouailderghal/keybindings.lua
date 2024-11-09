@@ -43,9 +43,10 @@ keymap.set("n", "<leader>td", ":tabclose<cr>", opts)
 keymap.set("n", "<tab>", ":tabnext<cr>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<cr>", opts)
 
--- Move to next and previous buffer
+-- Buffers bindings
 keymap.set("n", "<C-h>", ":bnext<CR>", opts)
 keymap.set("n", "<C-l>", ":bprevious<CR>", opts)
+keymap.set("n", "<leader>bd", ":bd<cr>")
 
 -- Move line or selected lined up acr down
 keymap.set("n", "<C-j>", ":m .+1<cr>==", opts)
@@ -72,6 +73,3 @@ keymap.set("n", "<F12>", ":set relativenumber!<cr>", opts)
 
 -- Compile project
 keymap.set("n", "<leader>pc", ":Compile<cr>")
-
-
-
