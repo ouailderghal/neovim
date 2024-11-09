@@ -186,6 +186,8 @@ vim.api.nvim_create_autocmd("TermOpen", {
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "compilation",
   callback = function()
+    vim.opt.cursorline = false
+    vim.opt.cursorcolumn = false
     vim.keymap.set("n", "R", ":Recompile<cr>", { buffer = 0 })
   end,
 })
