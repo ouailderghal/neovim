@@ -95,7 +95,10 @@ return {
       jsonls = { autostart = false },
       texlab = { autostart = false },
       bashls = { autostart = false },
-      intelephense = { autostart = false },
+      intelephense = {
+        autostart = false,
+        licenceKey = "~/intelephense/licence.txt",
+      },
     }
 
     -- List of linters and other packages
