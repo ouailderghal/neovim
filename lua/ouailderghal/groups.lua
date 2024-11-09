@@ -74,6 +74,17 @@ local indent_groups = {
     }
   },
   {
+    name = "PHPGroup",
+    pattern = "php",
+    file_types = { "FileType" },
+    indent = {
+      expand = true,
+      tabstop = 4,
+      softtabstop = 4,
+      shiftwidth = 4
+    }
+  },
+  {
     name = "MakefileGroup",
     pattern = {
       "make",
