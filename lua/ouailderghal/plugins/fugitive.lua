@@ -6,5 +6,9 @@ return {
      "<leader>gg",
      "<cmd>Git | wincmd _<cr>"
     },
+    {
+      "<leader>gb",
+      "<cmd>!gh browse<cr>"
+    },
   }
 }
