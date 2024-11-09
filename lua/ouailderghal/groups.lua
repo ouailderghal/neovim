@@ -181,3 +181,11 @@ vim.api.nvim_create_autocmd("TermOpen", {
     vim.opt.cursorcolumn = false
   end,
 })
+
+-- Define keybindigns in the compilation buffer
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "compilation",
+  callback = function()
+    vim.keymap.set("n", "R", ":Recompile<cr>", { buffer = 0 })
+  end,
+})
