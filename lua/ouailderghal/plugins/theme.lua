@@ -35,7 +35,6 @@ return {
         types = {},
         operators = {},
       },
-      color_overrides = {},
       custom_highlights = {},
       default_integrations = true,
       integrations = {
