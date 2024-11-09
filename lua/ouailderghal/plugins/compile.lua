@@ -9,5 +9,11 @@ return {
     vim.g.compile_mode = {
       baleia_setup = true,
     }
-  end
+  end,
+  keys = {
+    {
+      "<leader>pc",
+      "<cmd>Compile<cr>"
+    }
+  },
 }
