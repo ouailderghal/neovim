@@ -80,8 +80,8 @@ local indent_groups = {
     indent = {
       expand = true,
       tabstop = 4,
-      softtabstop = 4,
-      shiftwidth = 4
+      softtabstop = 0,
+      shiftwidth = 0
     }
   },
   {
