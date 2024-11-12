@@ -56,7 +56,7 @@ local function telescope_find_config_file()
 end
 
 -- Stop highlight search
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>")
+keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>")
 
 -- Toggle Zen mode
 keymap.set("n", "<leader>zz", function()
@@ -119,14 +119,14 @@ keymap.set("n", "<leader>rb", ":Refactor extract_block")
 keymap.set("n", "<leader>rbf", ":Refactor extract_block_to_file")
 
 -- Telescope keybindings
-vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files)
-vim.keymap.set("n", "<leader>pf", require("telescope.builtin").git_files)
-vim.keymap.set("n", "<leader>pg", require("telescope.builtin").live_grep)
-vim.keymap.set("n", "<leader>pd", require("telescope.builtin").diagnostics)
-vim.keymap.set("n", "<leader>sw", require("telescope.builtin").grep_string)
-vim.keymap.set("n", "<leader>sr", require("telescope.builtin").resume)
-vim.keymap.set("n", "<leader>s.", require("telescope.builtin").oldfiles)
-vim.keymap.set("n", "<leader><leader>", require("telescope.builtin").buffers)
-vim.keymap.set("n", "<leader>/", function() telescope_search_current_buffer() end)
-vim.keymap.set("n", "<leader>s/", function() telescope_search_open_buffers() end)
-vim.keymap.set("n", "<leader>sn", function() telescope_find_config_file() end)
+keymap.set("n", "<leader>ff", require("telescope.builtin").find_files)
+keymap.set("n", "<leader>pf", require("telescope.builtin").git_files)
+keymap.set("n", "<leader>pg", require("telescope.builtin").live_grep)
+keymap.set("n", "<leader>pd", require("telescope.builtin").diagnostics)
+keymap.set("n", "<leader>sw", require("telescope.builtin").grep_string)
+keymap.set("n", "<leader>sr", require("telescope.builtin").resume)
+keymap.set("n", "<leader>s.", require("telescope.builtin").oldfiles)
+keymap.set("n", "<leader><leader>", require("telescope.builtin").buffers)
+keymap.set("n", "<leader>/", function() telescope_search_current_buffer() end)
+keymap.set("n", "<leader>sn", function() telescope_find_config_file() end)
+keymap.set("n", "<leader>s/", function() telescope_search_open_buffers() end)
