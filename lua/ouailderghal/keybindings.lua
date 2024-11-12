@@ -27,7 +27,6 @@ end
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-
 -- Stop highlight search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
