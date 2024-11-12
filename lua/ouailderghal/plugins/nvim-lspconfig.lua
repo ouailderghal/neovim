@@ -89,7 +89,7 @@ return {
       pyright = { autostart = false },
       yamlls = { autostart = false },
       clangd = { autostart = false },
-      -- tsserver = { autostart = false },
+      ts_ls = { autostart = false },
       html = { autostart = false, filetypes = { "html" } },
       ansiblels = { autostart = false },
       jsonls = { autostart = false },
