@@ -16,12 +16,11 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.inccommand = "split"
 vim.opt.hlsearch = true
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.opt.scrolloff = 10
 vim.opt.list = false
 vim.opt.listchars = { trail = "·", tab = "» ", nbsp = "␣" }
 vim.opt.guicursor = ""
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.cursorline = true
