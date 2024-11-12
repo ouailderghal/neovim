@@ -1,1 +1,4 @@
-return { "apple/pkl-neovim" }
+return {
+  "apple/pkl-neovim",
+  cond = true,
+}

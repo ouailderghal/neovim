@@ -1,5 +1,7 @@
 return {
 	"lewis6991/gitsigns.nvim",
+  cond = true,
+
 	opts = {
 		signs = {
 			add = { text = "+" },

@@ -1,1 +1,5 @@
-return { "numToStr/Comment.nvim", opts = {} }
+return {
+  "numToStr/Comment.nvim",
+  cond = true,
+  opts = {},
+}

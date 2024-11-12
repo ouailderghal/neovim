@@ -2,6 +2,7 @@ return {
   "tpope/vim-fugitive",
   cond = true,
   lazy = false,
+
   keys = {
     {
       "<leader>gg",

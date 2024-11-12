@@ -1,7 +1,9 @@
 -- Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
 return {
   "nvim-treesitter/nvim-treesitter",
-  dependencies = { 
+  cond = true,
+
+  dependencies = {
     "nvim-treesitter/nvim-treesitter-textobjects",
     -- "nvim-treesitter/nvim-treesitter-context",
   },

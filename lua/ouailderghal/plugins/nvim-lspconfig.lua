@@ -1,5 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
+  cond = true,
 
   dependencies = {
     "williamboman/mason-lspconfig.nvim",

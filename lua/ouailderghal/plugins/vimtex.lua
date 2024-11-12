@@ -1,1 +1,4 @@
-return { "lervag/vimtex" }
+return {
+  "lervag/vimtex",
+  cond = true,
+}

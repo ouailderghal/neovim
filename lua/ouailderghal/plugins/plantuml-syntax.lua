@@ -1,1 +1,4 @@
-return { "aklt/plantuml-syntax" }
+return {
+  "aklt/plantuml-syntax",
+  cond = true,
+}
