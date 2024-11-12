@@ -79,8 +79,8 @@ keymap.set("n", "<tab>", ":tabnext<cr>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<cr>", opts)
 
 -- Buffers bindings
-keymap.set("n", "<C-h>", ":bnext<cr>", opts)
-keymap.set("n", "<C-l>", ":bprevious<cr>", opts)
+keymap.set("n", "<leader>h", ":bnext<cr>", opts)
+keymap.set("n", "<leader>l", ":bprevious<cr>", opts)
 keymap.set("n", "<leader>bd", ":bd<cr>")
 
 -- Open explorer
