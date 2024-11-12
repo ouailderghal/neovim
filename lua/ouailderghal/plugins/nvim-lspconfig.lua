@@ -105,6 +105,7 @@ return {
     local other = {
       "stylua",
       "flake8",
+      "phpcbf",
     }
 
     -- Setup Mason
