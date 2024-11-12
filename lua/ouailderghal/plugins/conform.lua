@@ -1,6 +1,6 @@
 return {
   "stevearc/conform.nvim",
-  event = { "BufWritePre" },
+  lazy = true,
   cmd = { "ConformInfo" },
   keys = {
     {
@@ -19,6 +19,7 @@ return {
       lua = { "stylua" },
       python = { "isort", "black" },
       php = { "phpcbf" },
+      go = { "gofmt" },
     },
   },
 }
