@@ -48,6 +48,9 @@ keymap.set("n", "<C-h>", ":bnext<CR>", opts)
 keymap.set("n", "<C-l>", ":bprevious<CR>", opts)
 keymap.set("n", "<leader>bd", ":bd<cr>")
 
+-- Open explorer
+keymap.set("n", "<Leader>op", ":Explore<CR>", opts)
+
 -- Move line or selected lined up acr down
 keymap.set("n", "<C-j>", ":m .+1<cr>==", opts)
 keymap.set("n", "<C-k>", ":m .-2<cr>==", opts)
