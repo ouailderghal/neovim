@@ -28,25 +28,26 @@ return {
           vim.keymap.set("n", keys, func, { buffer = event.buf })
         end
 
-        -- Setting keybindings for LSP 
-        local telescope_builtin = require("telescope.builtin")
-        lsp_map("gd", telescope_builtin.lsp_definitions)
-        lsp_map("gr", telescope_builtin.lsp_references)
-        lsp_map("gI", telescope_builtin.lsp_implementations)
-        lsp_map("<leader>D", telescope_builtin.lsp_type_definitions)
-        lsp_map("<leader>ds", telescope_builtin.lsp_document_symbols)
-        lsp_map("<leader>ws", telescope_builtin.lsp_dynamic_workspace_symbols)
+        -- Setting keybindings for LSP
+        lsp_map("gd", require("telescope.builtin").lsp_definitions)
+        lsp_map("gr", require("telescope.builtin").lsp_references)
+        lsp_map("gI", require("telescope.builtin").lsp_implementations)
+        lsp_map("<leader>D", require("telescope.builtin").lsp_type_definitions)
+        lsp_map("<leader>ds", require("telescope.builtin").lsp_document_symbols)
+        lsp_map(
+          "<leader>ws",
+          require("telescope.builtin").lsp_dynamic_workspace_symbols
+        )
         lsp_map("<leader>rn", vim.lsp.buf.rename)
         lsp_map("<leader>ca", vim.lsp.buf.code_action)
         lsp_map("K", vim.lsp.buf.hover)
         lsp_map("gD", vim.lsp.buf.declaration)
 
-
         -- If the editor supports highlighting, create the LSP highlight and
         -- LSP detach groups
         local client = vim.lsp.get_client_by_id(event.data.client_id)
         if client and client.server_capabilities.documentHighlightProvider then
-          local lsp_highlight_group  = create_augroup("LSPHighlightGroup")
+          local lsp_highlight_group = create_augroup("LSPHighlightGroup")
           vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
             buffer = event.buf,
             group = lsp_highlight_group,
@@ -64,15 +65,14 @@ return {
             group = lsp_detach_group,
             callback = function(event2)
               vim.lsp.buf.clear_references()
-              vim.api.nvim_clear_autocmds(
-                {
-                  group = lsp_highlight_group,
-                  buffer = event2.buf
-                })
+              vim.api.nvim_clear_autocmds({
+                group = lsp_highlight_group,
+                buffer = event2.buf,
+              })
             end,
           })
         end
-      end
+      end,
     })
 
     --  Add capabilities with nvim cmp
@@ -80,7 +80,8 @@ return {
     capabilities = vim.tbl_deep_extend(
       "force",
       capabilities,
-      require("cmp_nvim_lsp").default_capabilities())
+      require("cmp_nvim_lsp").default_capabilities()
+    )
 
     -- List of LSP servers
     local servers = {
@@ -112,7 +113,9 @@ return {
     require("mason").setup()
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, other)
-    require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+    require("mason-tool-installer").setup({
+      ensure_installed = ensure_installed,
+    })
     require("mason-lspconfig").setup({
       handlers = {
         function(server_name)
@@ -121,10 +124,11 @@ return {
             "force",
             {},
             capabilities,
-            server.capabilities or {})
+            server.capabilities or {}
+          )
           require("lspconfig")[server_name].setup(server)
         end,
       },
     })
-  end
+  end,
 }
