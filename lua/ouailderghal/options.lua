@@ -2,10 +2,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.g.have_nerd_font = false
 vim.g.editorconfig = false
-
 vim.opt.number = true
 vim.opt.relativenumber = false
-
 vim.opt.mouse = "a"
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
@@ -27,6 +25,9 @@ vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
+vim.opt.conceallevel = 2
+
+-- Line wrap & break
 vim.opt.colorcolumn = "120"
 vim.opt.textwidth = 120
 vim.opt.wrap = true
