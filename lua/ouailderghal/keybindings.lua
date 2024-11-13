@@ -40,7 +40,7 @@ end
 
 --- Perform a live grep search within open buffers using Telescope.
 --- @return nil
-local function telescope_search_open_buffers()
+local function telescope_grep_open_buffers()
   require("telescope.builtin").live_grep({
     grep_open_files = true,
     prompt_title = "Live Grep in Open Files",
@@ -53,6 +53,18 @@ local function telescope_find_config_file()
   require("telescope.builtin").find_files({
     cwd = vim.fn.stdpath("config"),
   })
+end
+
+--- Find hidden files using Telescope.
+--- @return nil
+local function telescope_find_hidden_files()
+  require("telescope.builtin").find_files({ hidden = true })
+end
+
+--- Find hidden Git files using Telescope.
+--- @return nil
+local function telescope_find_hidden_git_files()
+  require("telescope.builtin").git_files({ hidden = true })
 end
 
 -- Stop highlight search
@@ -120,15 +132,15 @@ keymap.set("n", "<leader>rbf", ":Refactor extract_block_to_file")
 
 -- Telescope keybindings
 keymap.set("n", "<leader>ff", require("telescope.builtin").find_files)
-keymap.set("n", "<leader>fh", function() require("telescope.builtin").find_files({ hidden = true }) end)
-keymap.set("n", "<leader>fn", function() telescope_find_config_file() end)
+keymap.set("n", "<leader>fh", telescope_find_hidden_files)
+keymap.set("n", "<leader>fn", telescope_find_config_file)
 keymap.set("n", "<leader>pf", require("telescope.builtin").git_files)
-keymap.set("n", "<leader>ph", function() require("telescope.builtin").git_files({ hidden = true }) end)
+keymap.set("n", "<leader>ph", telescope_find_hidden_git_files)
 keymap.set("n", "<leader>pg", require("telescope.builtin").live_grep)
 keymap.set("n", "<leader>pd", require("telescope.builtin").diagnostics)
 keymap.set("n", "<leader>sw", require("telescope.builtin").grep_string)
 keymap.set("n", "<leader>sr", require("telescope.builtin").resume)
 keymap.set("n", "<leader>s.", require("telescope.builtin").oldfiles)
 keymap.set("n", "<leader><leader>", require("telescope.builtin").buffers)
-keymap.set("n", "<leader>/", function() telescope_search_current_buffer() end)
-keymap.set("n", "<leader>s/", function() telescope_search_open_buffers() end)
+keymap.set("n", "<leader>/", telescope_search_current_buffer)
+keymap.set("n", "<leader>s/", telescope_grep_open_buffers)
