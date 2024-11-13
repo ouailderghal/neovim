@@ -7,21 +7,25 @@ return {
   config = function()
     require("catppuccin").setup({
       flavour = "mocha",
+      transparent_background = false,
+      show_end_of_buffer = true,
+      term_colors = false,
+      no_italic = false,
+      no_bold = false,
+      no_underline = false,
+      custom_highlights = {},
+      default_integrations = true,
+
       background = {
         light = "latte",
         dark = "mocha",
       },
-      transparent_background = false,
-      show_end_of_buffer = true,
-      term_colors = false,
+
       dim_inactive = {
         enabled = true,
         shade = "dark",
         percentage = 0.7,
       },
-      no_italic = false,
-      no_bold = false,
-      no_underline = false,
 
       styles = {
         comments = { "italic" },
@@ -37,8 +41,7 @@ return {
         types = { "bold" },
         operators = { "italic" },
       },
-      custom_highlights = {},
-      default_integrations = true,
+
       integrations = {
         cmp = true,
         gitsigns = true,
@@ -50,6 +53,7 @@ return {
           indentscope_color = "",
         },
       },
+
       color_overrides = {
         all = {
           rosewater = "#ffffff",

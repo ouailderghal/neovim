@@ -35,10 +35,7 @@ return {
         lsp_map("gI", require("telescope.builtin").lsp_implementations)
         lsp_map("<leader>D", require("telescope.builtin").lsp_type_definitions)
         lsp_map("<leader>ds", require("telescope.builtin").lsp_document_symbols)
-        lsp_map(
-          "<leader>ws",
-          require("telescope.builtin").lsp_dynamic_workspace_symbols
-        )
+        lsp_map("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols)
         lsp_map("<leader>rn", vim.lsp.buf.rename)
         lsp_map("<leader>ca", vim.lsp.buf.code_action)
         lsp_map("K", vim.lsp.buf.hover)
