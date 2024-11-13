@@ -1,5 +1,6 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+local telescope = require("telescope.builtin")
 
 -- Toggles between focus and zen modes using the zen-mode plugin
 -- @param mode (string) The mode to toggle ("focus" or "zen")
@@ -131,17 +132,17 @@ keymap.set("n", "<leader>rb", ":Refactor extract_block")
 keymap.set("n", "<leader>rbf", ":Refactor extract_block_to_file")
 
 -- Telescope keybindings
-keymap.set("n", "<leader>ff", require("telescope.builtin").find_files)
+keymap.set("n", "<leader>ff", telescope.find_files)
 keymap.set("n", "<leader>fh", telescope_find_hidden_files)
 keymap.set("n", "<leader>fn", telescope_find_config_file)
-keymap.set("n", "<leader>pf", require("telescope.builtin").git_files)
+keymap.set("n", "<leader>pf", telescope.git_files)
 keymap.set("n", "<leader>ph", telescope_find_hidden_git_files)
-keymap.set("n", "<leader>pg", require("telescope.builtin").live_grep)
-keymap.set("n", "<leader>pd", require("telescope.builtin").diagnostics)
-keymap.set("n", "<leader>sw", require("telescope.builtin").grep_string)
-keymap.set("n", "<leader>sr", require("telescope.builtin").resume)
-keymap.set("n", "<leader>s.", require("telescope.builtin").oldfiles)
-keymap.set("n", "<leader><leader>", require("telescope.builtin").buffers)
+keymap.set("n", "<leader>pg", telescope.live_grep)
+keymap.set("n", "<leader>pd", telescope.diagnostics)
+keymap.set("n", "<leader>sw", telescope.grep_string)
+keymap.set("n", "<leader>sr", telescope.resume)
+keymap.set("n", "<leader>s.", telescope.oldfiles)
+keymap.set("n", "<leader><leader>", telescope.buffers)
 keymap.set("n", "<leader>/", telescope_search_current_buffer)
 keymap.set("n", "<leader>s/", telescope_grep_open_buffers)
 
