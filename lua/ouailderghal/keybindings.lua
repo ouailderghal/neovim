@@ -151,6 +151,8 @@ keymap.set("n", "<leader>of", ":ObsidianQuickSwitch<cr>", opts)
 keymap.set("n", "<leader>os", ":ObsidianSearch<cr>", opts)
 keymap.set("n", "<leader>ow", ":ObsidianWorkspace<cr>", opts)
 keymap.set("n", "<leader>or", ":ObsidianRename<cr>", opts)
+keymap.set("n", "<leader>ot", ":ObsidianTOC<cr>", opts)
+
 keymap.set("n", "<C-space>", ":ObsidianToggleCheckbox<cr>", opts)
 
 keymap.set("n", "<leader>oit", ":ObsidianTemplate<cr>", opts)
