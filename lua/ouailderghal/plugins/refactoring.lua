@@ -1,7 +1,11 @@
+local globals = require("ouailderghal.globals")
+
 return {
   "ThePrimeagen/refactoring.nvim",
+
   cond = true,
   lazy = true,
+  ft = globals.REFACTOR_LAZY_FILE_TYPES,
 
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -9,20 +13,6 @@ return {
   },
 
   opts = {},
-
-  ft = {
-    "lua",
-    "go",
-    "c",
-    "cpp",
-    "python",
-    "bash",
-    "javascript",
-    "typescript",
-    "php",
-    "ocaml",
-    "java",
-  },
 
   keys = {
     {
