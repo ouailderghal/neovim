@@ -1,10 +1,54 @@
 return {
   "epwalsh/obsidian.nvim",
-  cond = true,
+
   version = "*",
+  cond = true,
   lazy = true,
   dependencies = { "nvim-lua/plenary.nvim" },
   ft = "markdown",
+
+  keys = {
+    {
+      "<leader>on",
+      "<cmd>ObsidianNew<cr>",
+      mode = "n",
+    },
+    {
+      "<leader>of",
+      "<cmd>ObsidianQuickSwitch<cr>",
+      mode = "n",
+    },
+    {
+      "<leader>os",
+      "<cmd>ObsidianSearch<cr>",
+      mode = "",
+    },
+    {
+      "<leader>ow",
+      "<cmd>ObsidianWorkspace<cr>",
+      mode = "n",
+    },
+    {
+      "<leader>or",
+      "<cmd>ObsidianRename<cr>",
+      mode = "n",
+    },
+    {
+      "<leader>ot",
+      "<cmd>ObsidianTOC<cr>",
+      mode = "n",
+    },
+    {
+      "<C-space>",
+      "<cmd>ObsidianToggleCheckbox<cr>",
+      mode = "n",
+    },
+    {
+      "<leader>oit",
+      "<cmd>ObsidianTemplate<cr>",
+      mode = "n",
+    },
+  },
 
   opts = {
     workspaces = {
