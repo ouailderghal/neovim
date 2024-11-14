@@ -1,7 +1,10 @@
+local globals = require("ouailderghal.globals")
+
 return {
   "kevinhwang91/nvim-ufo",
   cond = true,
-  lazy = false,
+  lazy = true,
+  ft = globals.TREESITTER_ENSURE_INSTALLED,
 
   dependencies = {
     "kevinhwang91/promise-async",
