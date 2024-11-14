@@ -82,15 +82,6 @@ keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 -- Toggle relative line number
 keymap.set("n", "<F12>", ":set relativenumber!<cr>", opts)
 
--- Refactoring keybindings
-keymap.set("x", "<leader>re", ":Refactor extract ")
-keymap.set("x", "<leader>rf", ":Refactor extract_to_file ")
-keymap.set("x", "<leader>rv", ":Refactor extract_var ")
-keymap.set({ "n", "x" }, "<leader>ri", ":Refactor inline_var")
-keymap.set("n", "<leader>rI", ":Refactor inline_func")
-keymap.set("n", "<leader>rb", ":Refactor extract_block")
-keymap.set("n", "<leader>rbf", ":Refactor extract_block_to_file")
-
 -- Fugitive keybindings
 keymap.set("n", "<leader>gg", "<cmd>G<cr>")
 keymap.set("n", "<leader>gp", "<cmd>G push<cr>")
