@@ -1,6 +1,6 @@
 return {
   "ThePrimeagen/harpoon",
-  cond = true,
+  cond = false,
 
   config = function()
     local mark = require("harpoon.mark")
