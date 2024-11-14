@@ -1,6 +1,18 @@
 return {
   "neovim/nvim-lspconfig",
   cond = true,
+  lazy = true,
+
+  keys = {
+    {
+      "<F2>",
+      "<cmd>LspStart<cr>",
+    },
+    {
+      "<F3>",
+      "<cmd>LspStop<cr>",
+    }
+  },
 
   dependencies = {
     "williamboman/mason-lspconfig.nvim",

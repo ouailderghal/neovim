@@ -43,7 +43,6 @@ end
 -- Stop highlight search
 keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>")
 
-
 -- Diagnostic keybindings
 keymap.set("n", "[d", vim.diagnostic.goto_prev)
 keymap.set("n", "]d", vim.diagnostic.goto_next)
@@ -69,10 +68,6 @@ keymap.set("n", "<C-j>", ":m .+1<cr>==", opts)
 keymap.set("n", "<C-k>", ":m .-2<cr>==", opts)
 keymap.set("v", "<C-j>", ":m '>+1<cr>gv=gv", opts)
 keymap.set("v", "<C-k>", ":m '<-2<cr>gv=gv", opts)
-
--- Start and stop LSP server
-keymap.set("n", "<F2>", ":LspStart<cr>", opts)
-keymap.set("n", "<F3>", ":LspStop<cr>", opts)
 
 -- Start and stop spell checking
 keymap.set("n", "<leader>le", ":set spell spelllang=en_us<cr>", opts)
