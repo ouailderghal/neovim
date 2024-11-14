@@ -2,32 +2,6 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 local telescope = require("telescope.builtin")
 
--- Toggles between focus and zen modes using the zen-mode plugin
--- @param mode (string) The mode to toggle ("focus" or "zen")
-local function toggle_zen_mode(mode)
-  local zen = require("zen-mode")
-  zen.setup({
-    window = {
-      width = 120,
-      options = {},
-    },
-  })
-
-  vim.wo.wrap = false
-  vim.wo.rnu = false
-
-  if mode == "focus" then
-    vim.wo.number = true
-    zen.toggle()
-  elseif mode == "zen" then
-    vim.wo.number = false
-    vim.opt.colorcolumn = "0"
-    zen.toggle()
-  else
-    error("Invalid mode specified. Use 'focus' or 'zen'.")
-  end
-end
-
 --- Search the current buffer using Telescope's fuzzy finder.
 --- @return nil
 local function telescope_search_current_buffer()
@@ -69,13 +43,6 @@ end
 -- Stop highlight search
 keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>")
 
--- Toggle Zen mode
-keymap.set("n", "<leader>zz", function()
-  toggle_zen_mode("focus")
-end)
-keymap.set("n", "<leader>zZ", function()
-  toggle_zen_mode("zen")
-end)
 
 -- Diagnostic keybindings
 keymap.set("n", "[d", vim.diagnostic.goto_prev)
