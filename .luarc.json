@@ -1,0 +1,9 @@
+{
+    "workspace": {
+        "maxPreload": 1600,
+        "preloadFileSize": 1000,
+        "ignoreDir": [
+            "/.git",
+        ],
+    },
+}
