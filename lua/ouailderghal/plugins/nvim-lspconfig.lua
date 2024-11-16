@@ -5,11 +5,11 @@ return {
 
   keys = {
     {
-      "<F2>",
+      "<F9>",
       "<cmd>LspStart<cr>",
     },
     {
-      "<F3>",
+      "<F10>",
       "<cmd>LspStop<cr>",
     }
   },

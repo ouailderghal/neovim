@@ -35,5 +35,9 @@ return {
     "php",
     "ocaml",
     "java",
-  }
+  },
+
+  DAP_LAZY_FILE_TYPES = {
+    "go",
+  },
 }
