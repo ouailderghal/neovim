@@ -3,14 +3,16 @@ local globals = require("ouailderghal.globals")
 return {
   "mfussenegger/nvim-dap",
   lazy = true,
-  ft = globals.DAP_LAZY_FILE_TYPES,
+  ft = globals.DEBUG_LAZY_FILE_TYPES,
 
   dependencies = {
     "rcarriga/nvim-dap-ui",
     "nvim-neotest/nvim-nio",
     "williamboman/mason.nvim",
     "jay-babu/mason-nvim-dap.nvim",
+
     "leoluz/nvim-dap-go",
+    "mfussenegger/nvim-dap-python",
   },
 
   keys = {
@@ -68,6 +70,7 @@ return {
 
       ensure_installed = {
         "delve",
+        "python",
       },
     })
 

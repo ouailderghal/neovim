@@ -37,7 +37,8 @@ return {
     "java",
   },
 
-  DAP_LAZY_FILE_TYPES = {
+  DEBUG_LAZY_FILE_TYPES = {
     "go",
+    "python",
   },
 }
