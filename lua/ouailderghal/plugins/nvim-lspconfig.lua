@@ -1,7 +1,9 @@
+local globals = require("ouailderghal.globals")
+
 return {
   "neovim/nvim-lspconfig",
   cond = true,
-  lazy = true,
+  ft = globals.CODE_FILE_TYPES,
 
   keys = {
     {
@@ -11,7 +13,7 @@ return {
     {
       "<F10>",
       "<cmd>LspStop<cr>",
-    }
+    },
   },
 
   dependencies = {
@@ -86,11 +88,7 @@ return {
 
     --  Add capabilities with nvim cmp
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = vim.tbl_deep_extend(
-      "force",
-      capabilities,
-      require("cmp_nvim_lsp").default_capabilities()
-    )
+    capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
     -- List of LSP servers
     local servers = {
@@ -129,12 +127,7 @@ return {
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
-          server.capabilities = vim.tbl_deep_extend(
-            "force",
-            {},
-            capabilities,
-            server.capabilities or {}
-          )
+          server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
           require("lspconfig")[server_name].setup(server)
         end,
       },
