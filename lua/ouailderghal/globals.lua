@@ -23,7 +23,7 @@ return {
     "yaml",
   },
 
-  REFACTOR_LAZY_FILE_TYPES = {
+  CODE_FILE_TYPES = {
     "lua",
     "go",
     "c",
