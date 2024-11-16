@@ -3,18 +3,6 @@ local globals = require("ouailderghal.globals")
 return {
   "neovim/nvim-lspconfig",
   cond = true,
-  ft = globals.CODE_FILE_TYPES,
-
-  keys = {
-    {
-      "<F9>",
-      "<cmd>LspStart<cr>",
-    },
-    {
-      "<F10>",
-      "<cmd>LspStop<cr>",
-    },
-  },
 
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
