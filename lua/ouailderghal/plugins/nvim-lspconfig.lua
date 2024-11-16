@@ -19,7 +19,6 @@ return {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     { "williamboman/mason.nvim", config = true },
     { "j-hui/fidget.nvim", opts = {} },
-    { "folke/neodev.nvim", opts = {} },
   },
 
   config = function()
