@@ -1,17 +1,53 @@
+local globals = require("ouailderghal.globals")
+
 return {
   "ThePrimeagen/harpoon",
-  cond = false,
+  cond = true,
+  lazy = true,
+  ft = globals.REFACTOR_LAZY_FILE_TYPES,
 
-  config = function()
-    local mark = require("harpoon.mark")
-    local ui = require("harpoon.ui")
-    local keymap = vim.keymap
-
-    keymap.set("n", "<leader>e", mark.add_file)
-    keymap.set("n", "<C-e>", ui.toggle_quick_menu)
-    keymap.set("n", "<leader>1", function() ui.nav_file(1) end)
-    keymap.set("n", "<leader>2", function() ui.nav_file(2) end)
-    keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
-    keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
-  end,
+  keys = {
+    {
+      "<leader>e",
+      function()
+        require("harpoon.mark").add_file()
+      end,
+      mode = "n",
+    },
+    {
+      "<C-e>",
+      function()
+        require("harpoon.ui").toggle_quick_menu()
+      end,
+      mode = "n",
+    },
+    {
+      "<leader>1",
+      function()
+        require("harpoon.ui").nav_file(1)
+      end,
+      mode = "n",
+    },
+    {
+      "<leader>2",
+      function()
+        require("harpoon.ui").nav_file(2)
+      end,
+      mode = "n",
+    },
+    {
+      "<leader>3",
+      function()
+        require("harpoon.ui").nav_file(3)
+      end,
+      mode = "n",
+    },
+    {
+      "<leader>4",
+      function()
+        require("harpoon.ui").nav_file(4)
+      end,
+      mode = "n",
+    },
+  },
 }
