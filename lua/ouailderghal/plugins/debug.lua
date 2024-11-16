@@ -2,7 +2,6 @@ local globals = require("ouailderghal.globals")
 
 return {
   "mfussenegger/nvim-dap",
-  cond = true,
   lazy = true,
   ft = globals.DAP_LAZY_FILE_TYPES,
 
@@ -14,25 +13,50 @@ return {
     "leoluz/nvim-dap-go",
   },
 
-  keys = function(_, keys)
-    local dap = require("dap")
-    local dapui = require("dapui")
-    return {
-      { "<F5>", dap.continue },
-      { "<F1>", dap.step_into },
-      { "<F2>", dap.step_over },
-      { "<F3>", dap.step_out },
-      { "<leader>b", dap.toggle_breakpoint },
-      {
-        "<leader>B",
-        function()
-          dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
-        end,
-      },
-      { "<F7>", dapui.toggle },
-      unpack(keys),
-    }
-  end,
+  keys = {
+    {
+      "<F5>",
+      function()
+        require("dap").continue()
+      end,
+    },
+    {
+      "<F1>",
+      function()
+        require("dap").step_into()
+      end,
+    },
+    {
+      "<F2>",
+      function()
+        require("dap").step_over()
+      end,
+    },
+    {
+      "<F3>",
+      function()
+        require("dap").step_out()
+      end,
+    },
+    {
+      "<leader>b",
+      function()
+        require("dap").toggle_breakpoint()
+      end,
+    },
+    {
+      "<leader>B",
+      function()
+        require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+      end,
+    },
+    {
+      "<F7>",
+      function()
+        require("dapui").toggle()
+      end,
+    },
+  },
 
   config = function()
     local dap = require("dap")
