@@ -1,5 +1,3 @@
-local globals = require("ouailderghal.globals")
-
 return {
   "neovim/nvim-lspconfig",
   cond = true,
@@ -97,17 +95,22 @@ return {
       },
     }
 
-    -- List of linters and other packages
-    local other = {
+    local formatters = {
       "stylua",
-      "flake8",
       "phpcbf",
+    }
+
+    local linters = {
+      "flake8",
+      "hadolint",
+      "mypy",
     }
 
     -- Setup Mason
     require("mason").setup()
     local ensure_installed = vim.tbl_keys(servers or {})
-    vim.list_extend(ensure_installed, other)
+    vim.list_extend(ensure_installed, formatters)
+    vim.list_extend(ensure_installed, linters)
     require("mason-tool-installer").setup({
       ensure_installed = ensure_installed,
     })

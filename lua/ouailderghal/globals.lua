@@ -41,4 +41,9 @@ return {
     "go",
     "python",
   },
+
+  LINTER_FILE_TYPES = {
+    "python",
+    "dockerfile",
+  }
 }
