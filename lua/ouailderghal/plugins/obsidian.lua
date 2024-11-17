@@ -21,7 +21,7 @@ return {
     {
       "<leader>os",
       "<cmd>ObsidianSearch<cr>",
-      mode = "",
+      mode = "n",
     },
     {
       "<leader>ow",

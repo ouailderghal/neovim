@@ -20,9 +20,9 @@ return {
 
   keys = {
     {
-      mode = { "v", "n" },
       "<leader>m",
       "<cmd>MCstart<cr>",
+      mode = { "v", "n" },
     },
   },
 }

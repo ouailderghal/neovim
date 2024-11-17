@@ -8,7 +8,10 @@ return {
       },
     },
   },
-  { "Bilal2453/luvit-meta", lazy = true },
+  {
+    "Bilal2453/luvit-meta",
+    lazy = true,
+  },
   {
     "hrsh7th/nvim-cmp",
     opts = function(_, opts)

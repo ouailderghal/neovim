@@ -32,11 +32,17 @@ return {
   keys = {
     {
       "<leader>zz",
-      function() toggle_zen_mode("focus") end,
+      function()
+        toggle_zen_mode("focus")
+      end,
+      mode = "n",
     },
     {
       "<leader>zZ",
-      function() toggle_zen_mode("zen") end,
+      function()
+        toggle_zen_mode("zen")
+      end,
+      mode = "n",
     },
   },
 }

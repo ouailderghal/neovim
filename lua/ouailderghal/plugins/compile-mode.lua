@@ -18,6 +18,7 @@ return {
     {
       "<leader>pc",
       "<cmd>Compile<cr>",
+      mode = "n",
     },
   },
 }

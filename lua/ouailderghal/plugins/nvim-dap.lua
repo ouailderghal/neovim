@@ -21,42 +21,50 @@ return {
       function()
         require("dap").continue()
       end,
+      mode = "n",
     },
     {
       "<F1>",
       function()
         require("dap").step_into()
       end,
+      mode = "n",
     },
     {
       "<F2>",
       function()
         require("dap").step_over()
       end,
+      mode = "n",
     },
     {
       "<F3>",
       function()
         require("dap").step_out()
       end,
+      mode = "n",
     },
     {
       "<leader>b",
+      mode = "n",
       function()
         require("dap").toggle_breakpoint()
       end,
+      mode = "n",
     },
     {
       "<leader>B",
       function()
         require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
       end,
+      mode = "n",
     },
     {
       "<F7>",
       function()
         require("dapui").toggle()
       end,
+      mode = "n",
     },
   },
 
