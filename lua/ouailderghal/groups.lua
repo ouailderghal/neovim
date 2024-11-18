@@ -19,7 +19,7 @@ end
 
 local indent_groups = {
   {
-    name = "LuaGroup",
+    name = "lua-indent-group",
     pattern = "lua",
     file_types = { "FileType" },
     indent = {
@@ -30,7 +30,7 @@ local indent_groups = {
     }
   },
   {
-    name = "GoGroup",
+    name = "go-indent-group",
     pattern = "go",
     file_types = { "FileType" },
     indent = {
@@ -41,7 +41,7 @@ local indent_groups = {
     }
   },
   {
-    name = "CGroup",
+    name = "c-indent-group",
     pattern = "c",
     file_types = { "FileType" },
     indent = {
@@ -52,7 +52,7 @@ local indent_groups = {
     }
   },
   {
-    name = "CPPGroup",
+    name = "cpp-indent-group",
     pattern = "cpp",
     file_types = { "FileType" },
     indent = {
@@ -63,7 +63,7 @@ local indent_groups = {
     }
   },
   {
-    name = "PythonGroup",
+    name = "python-indent-group",
     pattern = "python",
     file_types = { "FileType" },
     indent = {
@@ -74,7 +74,7 @@ local indent_groups = {
     }
   },
   {
-    name = "PHPGroup",
+    name = "php-indent-group",
     pattern = "php",
     file_types = { "FileType" },
     indent = {
@@ -85,7 +85,7 @@ local indent_groups = {
     }
   },
   {
-    name = "MakefileGroup",
+    name = "makefile-indent-group",
     pattern = {
       "make",
       "Makefile",
@@ -102,7 +102,7 @@ local indent_groups = {
     }
   },
   {
-    name = "DockerfileGroup",
+    name = "dockerfile-indent-group",
     pattern = {
       "docker",
       "Dockerfile",
@@ -119,7 +119,7 @@ local indent_groups = {
     }
   },
   {
-    name = "JSONGroup",
+    name = "json-indent-group",
     pattern = "json",
     file_types = { "FileType" },
     indent = {
@@ -130,7 +130,7 @@ local indent_groups = {
     }
   },
   {
-    name = "YAMLGroup",
+    name = "yaml-indent-group",
     pattern = "yaml",
     file_types = { "FileType" },
     indent = {
@@ -141,8 +141,19 @@ local indent_groups = {
     }
   },
   {
-    name = "LaTeXGroup",
+    name = "latex-indent-group",
     pattern = "tex",
+    file_types = { "FileType" },
+    indent = {
+      expand = true,
+      tabstop = 2,
+      softtabstop = 0,
+      shiftwidth = 0
+    }
+  },
+  {
+    name = "ocaml-indent-group",
+    pattern = "ocaml",
     file_types = { "FileType" },
     indent = {
       expand = true,
