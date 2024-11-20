@@ -1,6 +1,6 @@
 return {
   "ej-shafran/compile-mode.nvim",
-  cond = true,
+  cond = false,
   tag = "v5.3.1",
 
   dependencies = {
