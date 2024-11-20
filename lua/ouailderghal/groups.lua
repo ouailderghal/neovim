@@ -193,12 +193,10 @@ vim.api.nvim_create_autocmd("TermOpen", {
   end,
 })
 
--- Define keybindigns in the compilation buffer
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "compilation",
+-- Highlight when yanking text
+vim.api.nvim_create_autocmd('TextYankPost', {
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
   callback = function()
-    vim.opt.cursorline = false
-    vim.opt.cursorcolumn = false
-    vim.keymap.set("n", "R", ":Recompile<cr>", { buffer = 0 })
+    vim.highlight.on_yank()
   end,
 })
