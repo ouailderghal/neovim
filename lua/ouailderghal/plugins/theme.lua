@@ -1,7 +1,7 @@
 return {
   {
     "navarasu/onedark.nvim",
-    cond = true,
+    cond = false,
     opt = {
       style = "dark",
       transparent = false,
@@ -47,7 +47,7 @@ return {
   },
   {
     "catppuccin/nvim",
-    cond = false,
+    cond = true,
     name = "catppuccin",
     priority = 1000,
 
