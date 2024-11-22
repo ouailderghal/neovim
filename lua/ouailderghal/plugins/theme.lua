@@ -1,5 +1,73 @@
 return {
   {
+    "rose-pine/neovim",
+    cond = true,
+    config = function()
+      require("rose-pine").setup({
+        variant = "moon",
+        dark_variant = "moon",
+        dim_inactive_windows = true,
+        extend_background_behind_borders = true,
+
+        enable = {
+          terminal = true,
+          legacy_highlights = false,
+          migrations = true,
+        },
+
+        styles = {
+          bold = true,
+          italic = true,
+          transparency = false,
+        },
+
+        groups = {
+          background = "#000000",
+          border = "muted",
+          link = "iris",
+          panel = "#000000",
+
+          error = "love",
+          hint = "iris",
+          info = "foam",
+          note = "pine",
+          todo = "rose",
+          warn = "gold",
+
+          git_add = "foam",
+          git_change = "rose",
+          git_delete = "love",
+          git_dirty = "rose",
+          git_ignore = "muted",
+          git_merge = "iris",
+          git_rename = "pine",
+          git_stage = "iris",
+          git_text = "rose",
+          git_untracked = "subtle",
+
+          h1 = "iris",
+          h2 = "foam",
+          h3 = "rose",
+          h4 = "gold",
+          h5 = "pine",
+          h6 = "foam",
+        },
+
+        highlight_groups = {
+          Normal = { bg = "#000000" },
+          NormalNC = { bg = "#000000" },
+          StatusLine = { fg = "iris", bg = "iris", blend = 10 },
+		      StatusLineNC = { fg = "subtle", bg = "surface" },
+          Comment = { fg = "foam" },
+          VertSplit = { fg = "#000000", bg = "#000000" },
+        },
+      })
+
+      vim.opt.background = "dark"
+      vim.cmd("colorscheme rose-pine")
+    end,
+  },
+  {
     "navarasu/onedark.nvim",
     cond = false,
     opt = {
@@ -47,7 +115,7 @@ return {
   },
   {
     "catppuccin/nvim",
-    cond = true,
+    cond = false,
     name = "catppuccin",
     priority = 1000,
 
