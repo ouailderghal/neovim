@@ -89,6 +89,7 @@ return {
       jsonls = { autostart = false },
       texlab = { autostart = false },
       bashls = { autostart = false },
+      ocamllsp = { autostart = false },
       intelephense = {
         autostart = false,
         licenceKey = "~/intelephense/licence.txt",
