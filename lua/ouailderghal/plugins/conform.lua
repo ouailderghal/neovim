@@ -22,6 +22,7 @@ return {
       python = { "isort", "black" },
       php = { "phpcbf" },
       go = { "gofmt" },
+      yaml = { "yamlfmt" },
     },
   },
 }
