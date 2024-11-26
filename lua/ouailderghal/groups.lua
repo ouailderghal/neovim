@@ -26,8 +26,8 @@ local indent_groups = {
       expand = true,
       tabstop = 2,
       softtabstop = 0,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "go-indent-group",
@@ -37,8 +37,8 @@ local indent_groups = {
       expand = false,
       tabstop = 4,
       softtabstop = 4,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "c-indent-group",
@@ -48,8 +48,8 @@ local indent_groups = {
       expand = true,
       tabstop = 4,
       softtabstop = 0,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "cpp-indent-group",
@@ -59,8 +59,8 @@ local indent_groups = {
       expand = true,
       tabstop = 4,
       softtabstop = 0,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "python-indent-group",
@@ -70,8 +70,8 @@ local indent_groups = {
       expand = true,
       tabstop = 4,
       softtabstop = 0,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "php-indent-group",
@@ -81,8 +81,8 @@ local indent_groups = {
       expand = true,
       tabstop = 4,
       softtabstop = 0,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "makefile-indent-group",
@@ -91,15 +91,15 @@ local indent_groups = {
       "Makefile",
       "*.Makefile",
       "makefile",
-      "*.makefile"
+      "*.makefile",
     },
     file_types = { "FileType", "BufRead", "BufNewFile" },
     indent = {
       expand = false,
       tabstop = 2,
       softtabstop = 2,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "dockerfile-indent-group",
@@ -108,15 +108,15 @@ local indent_groups = {
       "Dockerfile",
       "*.Dockerfile",
       "dockerfile",
-      "*.dockerfile"
+      "*.dockerfile",
     },
     file_types = { "FileType", "BufRead", "BufNewFile" },
     indent = {
       expand = true,
       tabstop = 2,
       softtabstop = 0,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "json-indent-group",
@@ -126,8 +126,8 @@ local indent_groups = {
       expand = true,
       tabstop = 2,
       softtabstop = 0,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "yaml-indent-group",
@@ -137,8 +137,8 @@ local indent_groups = {
       expand = true,
       tabstop = 2,
       softtabstop = 0,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "latex-indent-group",
@@ -148,8 +148,8 @@ local indent_groups = {
       expand = true,
       tabstop = 2,
       softtabstop = 0,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
   },
   {
     name = "ocaml-indent-group",
@@ -159,8 +159,19 @@ local indent_groups = {
       expand = true,
       tabstop = 2,
       softtabstop = 0,
-      shiftwidth = 0
-    }
+      shiftwidth = 0,
+    },
+  },
+  {
+    name = "haskell-indent-group",
+    pattern = "haskell",
+    file_types = { "FileType" },
+    indent = {
+      expand = true,
+      tabstop = 2,
+      softtabstop = 0,
+      shiftwidth = 0,
+    },
   },
 }
 
@@ -172,12 +183,8 @@ for _, group in ipairs(indent_groups) do
       group = augroup,
       pattern = group.pattern,
       callback = function()
-        set_indent(
-          group.indent.expand,
-          group.indent.tabstop,
-          group.indent.softtabstop,
-          group.indent.shiftwidth)
-      end
+        set_indent(group.indent.expand, group.indent.tabstop, group.indent.softtabstop, group.indent.shiftwidth)
+      end,
     })
   end
 end
@@ -194,8 +201,8 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 -- Highlight when yanking text
-vim.api.nvim_create_autocmd('TextYankPost', {
-  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
   callback = function()
     vim.highlight.on_yank()
   end,
