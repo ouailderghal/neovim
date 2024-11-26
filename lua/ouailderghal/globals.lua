@@ -21,6 +21,7 @@ return {
     "java",
     "json",
     "yaml",
+    "haskell",
   },
 
   CODE_FILE_TYPES = {
@@ -35,6 +36,7 @@ return {
     "php",
     "ocaml",
     "java",
+    "haskell",
   },
 
   DEBUG_LAZY_FILE_TYPES = {
