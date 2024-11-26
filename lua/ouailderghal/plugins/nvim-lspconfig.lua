@@ -98,6 +98,7 @@ return {
     local formatters = {
       "stylua",
       "phpcbf",
+      "yamlfmt"
     }
 
     local linters = {
