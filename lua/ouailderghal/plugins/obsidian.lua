@@ -56,6 +56,10 @@ return {
         name = "learning",
         path = "~/vaults/learning",
       },
+      {
+        name = "papers",
+        path = "~/vaults/papers",
+      },
     },
 
     templates = {
