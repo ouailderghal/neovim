@@ -1,7 +1,7 @@
 return {
   {
     "rose-pine/neovim",
-    cond = true,
+    cond = false,
     config = function()
       require("rose-pine").setup({
         variant = "moon",
@@ -57,7 +57,7 @@ return {
           Normal = { bg = "#000000" },
           NormalNC = { bg = "#000000" },
           StatusLine = { fg = "iris", bg = "iris", blend = 10 },
-		      StatusLineNC = { fg = "subtle", bg = "surface" },
+          StatusLineNC = { fg = "subtle", bg = "surface" },
           Comment = { fg = "foam" },
           VertSplit = { fg = "#000000", bg = "#000000" },
         },
@@ -203,6 +203,17 @@ return {
 
       vim.opt.background = "dark"
       vim.cmd.colorscheme("catppuccin")
+    end,
+  },
+  {
+    "folke/tokyonight.nvim",
+    cond = true,
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      vim.opt.background = "dark"
+      vim.cmd.colorscheme("tokyonight-night")
     end,
   },
 }
