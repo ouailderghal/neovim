@@ -2,6 +2,7 @@ return {
   {
     "rose-pine/neovim",
     cond = false,
+    lazy = false,
     config = function()
       require("rose-pine").setup({
         variant = "moon",
@@ -70,6 +71,7 @@ return {
   {
     "navarasu/onedark.nvim",
     cond = false,
+    lazy = false,
     opt = {
       style = "dark",
       transparent = false,
@@ -115,7 +117,8 @@ return {
   },
   {
     "catppuccin/nvim",
-    cond = false,
+    cond = true,
+    lazy = false,
     name = "catppuccin",
     priority = 1000,
 
@@ -207,7 +210,7 @@ return {
   },
   {
     "folke/tokyonight.nvim",
-    cond = true,
+    cond = false,
     lazy = false,
     priority = 1000,
     opts = {},
