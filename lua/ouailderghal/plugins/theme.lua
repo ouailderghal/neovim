@@ -1,31 +1,39 @@
 return {
   {
-    "Shatur/neovim-ayu",
+    "ellisonleao/gruvbox.nvim",
     cond = true,
     lazy = false,
     priority = 1000,
     opts = {},
     config = function()
-      require("ayu").setup({
-        theme = "ayu",
-        mirage = false,
-        terminal = true,
+
+      require("gruvbox").setup({
+        terminal_colors = true,
+        undercurl = true,
+        underline = true,
+        bold = true,
+        italic = {
+          strings = true,
+          emphasis = true,
+          comments = true,
+          operators = false,
+          folds = true,
+        },
+        strikethrough = true,
+        invert_selection = false,
+        invert_signs = false,
+        invert_tabline = false,
+        invert_intend_guides = false,
+        inverse = true,
+        contrast = "hard",
+        palette_overrides = {},
         overrides = {},
+        dim_inactive = false,
+        transparent_mode = false,
       })
 
       vim.opt.background = "dark"
-      vim.cmd.colorscheme("ayu-dark")
-    end,
-  },
-  {
-    "folke/tokyonight.nvim",
-    cond = false,
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-      vim.opt.background = "dark"
-      vim.cmd.colorscheme("tokyonight-night")
+      vim.cmd.colorscheme("gruvbox")
     end,
   },
 }
