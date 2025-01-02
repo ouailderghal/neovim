@@ -22,11 +22,13 @@ return {
         find_files = {
           previewer = false,
           theme = "ivy",
+          layout_config = { height = 0.5 },
         },
 
         live_grep = {
           previewer = true,
           theme = "ivy",
+          layout_config = { height = 0.8 },
         },
       },
 
