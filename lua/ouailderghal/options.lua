@@ -20,7 +20,7 @@ vim.opt.hlsearch = true
 vim.opt.scrolloff = 10
 vim.opt.list = false
 vim.opt.listchars = { trail = "·", tab = "» ", nbsp = "␣" }
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.cursorline = true
