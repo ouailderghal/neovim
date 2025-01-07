@@ -30,6 +30,6 @@ vim.opt.conceallevel = 2
 -- Line wrap & break
 vim.opt.colorcolumn = "120"
 vim.opt.textwidth = 120
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.formatoptions:append("t")
