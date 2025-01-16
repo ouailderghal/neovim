@@ -55,6 +55,7 @@
   "trouble.nvim": { "branch": "main", "commit": "46cf952fc115f4c2b98d4e208ed1e2dce08c9bf6" },
   "vim-fugitive": { "branch": "master", "commit": "174230d6a7f2df94705a7ffd8d5413e27ec10a80" },
   "vim-obsession": { "branch": "master", "commit": "ed9dfc7c2cc917ace8b24f4f9f80a91e05614b63" },
+  "vim-orgmode": { "branch": "master", "commit": "83982349e45e6d27d186ad82050f86c3233a16f0" },
   "vimtex": { "branch": "master", "commit": "99c56940cefe6adead7500f7657cd6721ff38d05" },
   "zen-mode.nvim": { "branch": "main", "commit": "863f150ca321b3dd8aa1a2b69b5f411a220e144f" }
 }
