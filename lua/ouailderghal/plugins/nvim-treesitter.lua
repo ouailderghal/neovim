@@ -19,6 +19,8 @@ return {
     ensure_installed = globals.TREESITTER_ENSURE_INSTALLED,
 
     highlight = { enable = true },
+    disable = { "dockerfile" },
+
     indent = { enable = false },
 
     incremental_selection = {

@@ -17,7 +17,6 @@ return {
     "latex",
     "php",
     "ocaml",
-    "dockerfile",
     "java",
     "json",
     "yaml",
