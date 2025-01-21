@@ -18,20 +18,6 @@ return {
 
   config = function()
     require("telescope").setup({
-      pickers = {
-        find_files = {
-          previewer = false,
-          theme = "ivy",
-          layout_config = { height = 0.5 },
-        },
-
-        live_grep = {
-          previewer = true,
-          theme = "ivy",
-          layout_config = { height = 0.8 },
-        },
-      },
-
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown(),
