@@ -1,6 +1,6 @@
 return {
   "catppuccin/nvim",
-  cond = true,
+  cond = false,
   lazy = false,
   priority = 1000,
 
@@ -36,7 +36,11 @@ return {
         types = {},
         operators = {},
       },
-      color_overrides = {},
+      color_overrides = {
+        all = {
+          base = "#000000",
+        }
+      },
       custom_highlights = {},
       default_integrations = true,
       integrations = {

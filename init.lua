@@ -4,3 +4,5 @@ require("ouailderghal.options")
 require("ouailderghal.lazy")
 require("ouailderghal.groups")
 require("ouailderghal.keybindings")
+
+vim.cmd.colorscheme("retrobox")
