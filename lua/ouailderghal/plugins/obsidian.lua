@@ -2,7 +2,7 @@ return {
   "epwalsh/obsidian.nvim",
 
   version = "*",
-  cond = true,
+  cond = false,
   lazy = true,
   dependencies = { "nvim-lua/plenary.nvim" },
   ft = "markdown",
