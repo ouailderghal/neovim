@@ -1,6 +1,6 @@
 return {
 	"lewis6991/gitsigns.nvim",
-  cond = true,
+  cond = false,
 
 	opts = {
 		signs = {
