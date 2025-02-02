@@ -9,6 +9,8 @@ return {
     { "j-hui/fidget.nvim", opts = {} },
   },
 
+  cmd = { "LspStart" },
+
   keys = {
     {
       "<F11>",
