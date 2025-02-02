@@ -9,6 +9,7 @@ return {
     "python",
     "go",
     "c",
+    "tex",
   },
 
   config = function()
