@@ -93,20 +93,17 @@ return {
 
     -- List of LSP servers
     local servers = {
-      -- lua_ls = { autostart = false },
-      -- gopls = { autostart = false },
-      -- pyright = { autostart = false },
       clangd = { autostart = false },
-      -- ts_ls = { autostart = false },
-      -- jsonls = { autostart = false },
-      -- html = { autostart = false, filetypes = { "html" } },
-      -- ansiblels = { autostart = false },
-      -- texlab = { autostart = false },
-      -- bashls = { autostart = false },
+      bashls = { autostart = false },
+      gopls = { autostart = false },
+      pyright = { autostart = false },
+      html = { autostart = false, filetypes = { "html" } },
+      ts_ls = { autostart = false },
       intelephense = {
         autostart = false,
         licenceKey = "~/intelephense/licence.txt",
       },
+      texlab = { autostart = false },
     }
 
     local formatters = {}
