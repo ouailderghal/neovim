@@ -7,67 +7,60 @@ return {
     "nvim-lua/plenary.nvim"
   },
 
-  config = {
-    pickers = {
-      builtin = { theme = "ivy" },
-      find_files = { theme = "ivy" },
-      git_files = { theme = "ivy" },
-      live_grep = { theme = "ivy" },
-      git_branches = { theme = "ivy" },
-      oldfiles = { theme = "ivy" },
-      live_grep = { theme = "ivy" },
-      buffers = { theme = "ivy" },
-    }
-  },
+  config = function()
+    require("telescope").setup({
+      defaults = require("telescope.themes").get_ivy()
+    })
+  end,
 
   keys = {
     {
       "<leader>ss",
       mode = "n",
       function()
-	require("telescope.builtin").builtin()
+	      require("telescope.builtin").builtin()
       end,
     },
     {
       "<leader>sf",
       mode = "n",
       function()
-	require("telescope.builtin").find_files({ hidden = true })
+	      require("telescope.builtin").find_files({ hidden = true })
       end,
     },
     {
       "<leader>sp",
       mode = "n",
       function()
-	require("telescope.builtin").git_files({ hidden = true })
+	      require("telescope.builtin").git_files({ hidden = true })
       end,
     },
     {
       "<leader>s.",
       mode = "n",
       function()
-	require("telescope.builtin").oldfiles()
+	      require("telescope.builtin").oldfiles()
       end,
     },
     {
       "<leader>sg",
       mode = "n",
       function()
-	require("telescope.builtin").live_grep()
+	      require("telescope.builtin").live_grep()
       end,
     },
     {
       "<leader><leader>",
       mode = "n",
       function()
-	require("telescope.builtin").buffers()
+	      require("telescope.builtin").buffers()
       end,
     },
     {
       "<leader>sb",
       mode = "n",
       function()
-	require("telescope.builtin").git_branches()
+	      require("telescope.builtin").git_branches()
       end,
     },
   },
