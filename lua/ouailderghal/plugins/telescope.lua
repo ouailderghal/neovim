@@ -1,6 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
-  cond = true,
+  lazy = true,
   tag = "0.1.8",
 
   dependencies = {
