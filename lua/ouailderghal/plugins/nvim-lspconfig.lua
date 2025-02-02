@@ -5,7 +5,6 @@ return {
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
-    "nvim-telescope/telescope.nvim",
     { "williamboman/mason.nvim", config = true },
     { "j-hui/fidget.nvim", opts = {} },
   },
