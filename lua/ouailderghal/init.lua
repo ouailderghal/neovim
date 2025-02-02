@@ -1,3 +1,3 @@
 require("ouailderghal.lazy")
-require("ouailderghal.options")
 require("ouailderghal.theme")
+require("ouailderghal.options")
