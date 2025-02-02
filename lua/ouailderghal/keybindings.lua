@@ -31,3 +31,9 @@ map("n", "<leader>t", ":tabnew<CR>")
 map("n", "<leader>x", ":tabclose<CR>")
 map("n", "<leader>j", ":tabprevious<CR>")
 map("n", "<leader>k", ":tabnext<CR>")
+
+-- easy split navigation
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-l>", "<C-w>l")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
