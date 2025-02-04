@@ -67,5 +67,12 @@ return {
 	      require("telescope.builtin").git_branches()
       end,
     },
+    {
+      "<leader>sc",
+      mode = "n",
+      function()
+        require("telescope.builtin").commands()
+      end,
+    },
   },
 }
