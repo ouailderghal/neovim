@@ -4,7 +4,7 @@ local function toggle_zen_mode(mode)
   local zen = require("zen-mode")
   zen.setup({
     window = {
-      width = 120,
+      width = 80,
       options = {},
     },
   })
