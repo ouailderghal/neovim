@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  cond = false,
   lazy = true,
   build = ":TSUpdate",
 
