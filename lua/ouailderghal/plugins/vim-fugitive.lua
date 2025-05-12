@@ -2,10 +2,7 @@ return {
   "tpope/vim-fugitive",
   lazy = true,
   cmd = { "G" },
-
-  cond = function()
-    return vim.fn.isdirectory(".git") == 1
-  end,
+  cond = true,
 
   keys = { 
     {
