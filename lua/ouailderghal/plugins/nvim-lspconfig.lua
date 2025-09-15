@@ -1,6 +1,5 @@
 return {
   "neovim/nvim-lspconfig",
-  lazy = true,
 
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
@@ -9,20 +8,21 @@ return {
     { "j-hui/fidget.nvim", opts = {} },
   },
 
-  cmd = { "LspStart" },
-
-  keys = {
-    {
-      "<F11>",
-      mode = "n",
-      "<cmd>LspStart<cr>"
-    },
-    {
-      "<F12>",
-      mode = "n",
-      "<cmd>LspStop<cr>"
-    },
-  },
+  -- lazy = true,
+  -- cmd = { "LspStart" },
+  --
+  -- keys = {
+  --   {
+  --     "<F11>",
+  --     mode = "n",
+  --     "<cmd>LspStart<cr>"
+  --   },
+  --   {
+  --     "<F12>",
+  --     mode = "n",
+  --     "<cmd>LspStop<cr>"
+  --   },
+  -- },
 
   config = function()
     -- Create an autocommand group.
