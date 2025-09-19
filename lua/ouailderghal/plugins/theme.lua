@@ -5,7 +5,7 @@ return {
 
     require("onedark").setup({
       style = "deep",
-      transparent = false,
+      transparent = true,
       term_colors = true,
       ending_tildes = false,
       cmp_itemkind_reverse = false,
