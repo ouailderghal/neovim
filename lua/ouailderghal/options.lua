@@ -1,6 +1,6 @@
 -- Leader keys
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+-- vim.g.maplocalleader = "\\"
 
 -- Global settings
 vim.g.have_nerd_font = false
@@ -50,12 +50,6 @@ vim.opt.splitbelow = true
 -- Performance tweaks
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
-
--- Netrw file explorer settings
-vim.g.netrw_banner = 0
-vim.g.netrw_browse_split = 4
-vim.g.netrw_altv = 1
-vim.g.netrw_liststyle = 3
 
 vim.api.nvim_create_autocmd("TextYankPost", {
     callback = function()
