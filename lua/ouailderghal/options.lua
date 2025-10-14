@@ -32,7 +32,6 @@ vim.opt.cursorcolumn = false
 vim.opt.scrolloff = 10
 vim.opt.list = false
 vim.opt.listchars = { trail = "·", tab = "» ", nbsp = "␣" }
-vim.opt.guicursor = ""
 
 -- Indentation and formatting
 vim.opt.smartindent = true
