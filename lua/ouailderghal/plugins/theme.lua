@@ -1,30 +1,22 @@
 return { 
-  "ellisonleao/gruvbox.nvim", 
+  "mawkler/onedark.nvim", 
   priority = 1000 , 
   config = function()
-    require("gruvbox").setup({
-        terminal_colors = true, -- add neovim terminal colors
-        undercurl = true,
-        underline = true,
-        bold = true,
-        italic = {
-        strings = true,
-        emphasis = true,
-        comments = true,
-        operators = false,
-        folds = true,
-        },
-        strikethrough = true,
-        invert_selection = false,
-        invert_signs = false,
-        invert_tabline = false,
-        inverse = true, -- invert background for search, diffs, statuslines and errors
-        contrast = "", -- can be "hard", "soft" or empty string
-        palette_overrides = {},
-        overrides = {},
-        dim_inactive = false,
-        transparent_mode = false,
-    })
-  vim.cmd("colorscheme gruvbox")
+  require("onedark").setup({
+    function_style = "italic",
+    sidebars = {"qf", "vista_kind", "terminal", "packer"},
+    colors = {hint = "orange0", error = "#ff0000"},
+
+    overrides = function(c)
+      return {
+        htmlTag = {fg = c.red0, bg = "#282c34", sp = c.hint, style = "underline"},
+        DiagnosticHint = {link = "LspDiagnosticsDefaultHint"},
+        TSField = {},
+      }
+    end
+  })
+
+
+  vim.cmd("colorscheme onedark")
   end, 
 }
