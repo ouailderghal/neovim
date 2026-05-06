@@ -46,3 +46,14 @@ map("n", "<leader>d", ":bd! <CR>")
 -- Reload config
 map("n", "<leader>r", ":source ~/.config/nvim/init.lua<CR>")
 
+-- Toggle background between light and dark
+local function toggle_background()
+  if vim.o.background == "dark" then
+    vim.o.background = "light"
+  else
+    vim.o.background = "dark"
+  end
+end
+
+vim.keymap.set("n", "<leader>tb", toggle_background, { desc = "Toggle background light/dark" })
+vim.keymap.set("n", "<F10>", toggle_background, { desc = "Toggle background light/dark" })
