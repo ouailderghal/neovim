@@ -56,12 +56,18 @@ require('which-key').setup {
     { '<leader>s', group = '[S]earch', mode = { 'n', 'v' } },
     { '<leader>t', group = '[T]oggle' },
     { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+    { '<leader>z', group = '[Z]en Mode' },
     { 'gr', group = 'LSP Actions', mode = { 'n' } },
   },
 }
 
 -- Theme: see lua/config/theme.lua
 require 'config.theme'
+
+-- Distraction-free writing/coding
+vim.pack.add { gh 'folke/zen-mode.nvim' }
+require('zen-mode').setup { window = { width = tonumber(vim.o.colorcolumn) } }
+vim.keymap.set('n', '<leader>zz', function() require('zen-mode').toggle() end, { desc = '[Z]en mode ' })
 
 -- Highlight todo, notes, etc in comments
 vim.pack.add { gh 'folke/todo-comments.nvim' }
