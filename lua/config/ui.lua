@@ -31,6 +31,9 @@ require('guess-indent').setup {}
 -- Only install nvim-web-devicons if a Nerd Font is available
 if vim.g.have_nerd_font then vim.pack.add { gh 'nvim-tree/nvim-web-devicons' } end
 
+-- Git integration: stage, commit, diff, blame, browse, etc.
+vim.pack.add { gh 'tpope/vim-fugitive' }
+
 -- Adds git related signs to the gutter, as well as utilities for managing changes
 -- See `:help gitsigns` to understand what each configuration key does.
 vim.pack.add { gh 'lewis6991/gitsigns.nvim' }
