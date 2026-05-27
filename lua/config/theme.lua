@@ -23,3 +23,15 @@ require('gruvbox').setup {
 }
 
 vim.cmd.colorscheme 'tokyonight-night'
+
+-- [[ Toggle dark/light background ]]
+local function toggle_background()
+  if vim.o.background == 'dark' then
+    vim.o.background = 'light'
+  else
+    vim.o.background = 'dark'
+  end
+end
+
+vim.keymap.set('n', '<F10>', toggle_background, { desc = 'Toggle dark/light background' })
+vim.keymap.set('n', '<leader>tb', toggle_background, { desc = 'Toggle dark/light background' })
