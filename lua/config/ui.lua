@@ -33,6 +33,8 @@ if vim.g.have_nerd_font then vim.pack.add { gh 'nvim-tree/nvim-web-devicons' } e
 
 -- Git integration: stage, commit, diff, blame, browse, etc.
 vim.pack.add { gh 'tpope/vim-fugitive' }
+vim.keymap.set('n', '<leader>gg', function() vim.cmd.Git() end, { desc = '[G]it: open fugitive' })
+vim.keymap.set('n', '<leader>gl', function() require('snacks').lazygit() end, { desc = '[G]it: open lazygit' })
 
 -- Adds git related signs to the gutter, as well as utilities for managing changes
 -- See `:help gitsigns` to understand what each configuration key does.
