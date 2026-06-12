@@ -91,6 +91,10 @@
       "rev": "7d8dad2c837fcdf2e65997e68657c1a21c568074",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
+    "onedark.nvim": {
+      "rev": "df4792accde9db0043121f32628bcf8e645d9aea",
+      "src": "https://github.com/navarasu/onedark.nvim"
+    },
     "plantuml-syntax": {
       "rev": "9d4900aa16674bf5bb8296a72b975317d573b547",
       "src": "https://github.com/aklt/plantuml-syntax"
@@ -134,6 +138,10 @@
     "vim-minizinc": {
       "rev": "83ac0d6b8ceab3417b43925a99894c0423e3c492",
       "src": "https://github.com/vale1410/vim-minizinc"
+    },
+    "vimtex": {
+      "rev": "24e229914182ff301496a3e2c4214b28c4928d3f",
+      "src": "https://github.com/lervag/vimtex"
     },
     "which-key.nvim": {
       "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",

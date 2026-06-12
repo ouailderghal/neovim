@@ -52,5 +52,6 @@ require 'config.lsp'
 require 'config.formatting'
 require 'config.completion'
 require 'config.treesitter'
+require 'config.vimtex'
 
 -- vim: ts=2 sts=2 sw=2 et

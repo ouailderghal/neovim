@@ -22,7 +22,15 @@ require('gruvbox').setup {
   },
 }
 
-vim.cmd.colorscheme 'tokyonight-night'
+-- [[ One Dark ]]
+vim.pack.add { gh 'navarasu/onedark.nvim' }
+require('onedark').setup {
+  code_style = {
+    comments = 'none',
+  },
+}
+
+vim.cmd.colorscheme 'onedark'
 
 -- [[ Toggle dark/light background ]]
 local function toggle_background()
