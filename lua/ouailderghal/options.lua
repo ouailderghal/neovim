@@ -49,11 +49,6 @@ vim.opt.formatoptions:remove("t")
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Folding (managed by nvim-ufo)
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 99
-vim.opt.foldenable = true
-
 -- Performance tweaks
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
