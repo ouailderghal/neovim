@@ -1,10 +1,12 @@
+vim.filetype.add({ extension = { tikz = "tikz" } })
+
 -- Leader keys
 vim.g.mapleader = " "
 -- vim.g.maplocalleader = "\\"
 
 -- Global settings
 vim.g.have_nerd_font = false
-vim.g.editorconfig = false
+vim.g.editorconfig = true
 
 -- General editor behavior
 vim.opt.backup = false
@@ -36,9 +38,9 @@ vim.opt.listchars = { trail = "·", tab = "» ", nbsp = "␣" }
 -- Indentation and formatting
 vim.opt.smartindent = true
 vim.opt.autoindent = true
-vim.opt.conceallevel = 2
-vim.opt.colorcolumn = "120"
-vim.opt.textwidth = 120
+vim.opt.conceallevel = 0
+vim.opt.colorcolumn = "80"
+vim.opt.textwidth = 80
 vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.formatoptions:remove("t")
