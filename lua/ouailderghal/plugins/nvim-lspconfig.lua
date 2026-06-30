@@ -104,6 +104,10 @@ return {
         licenceKey = "~/intelephense/licence.txt",
       },
       texlab = { autostart = false },
+      harper_ls = {
+        autostart = false,
+        filetypes = { "markdown", "tex", "latex" },
+      },
     }
 
     local formatters = {}
