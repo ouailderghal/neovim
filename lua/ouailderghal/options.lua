@@ -25,6 +25,9 @@ vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.opt.inccommand = "split"
 
+-- Cursor
+vim.opt.guicursor = "a:block"
+
 -- UI settings
 vim.opt.number = true
 vim.opt.relativenumber = true
