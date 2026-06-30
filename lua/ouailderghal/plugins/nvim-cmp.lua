@@ -31,6 +31,9 @@ return {
     local cmp = require("cmp")
     local luasnip = require("luasnip")
     luasnip.config.setup({})
+    require("luasnip.loaders.from_lua").lazy_load({
+      paths = { vim.fn.stdpath("config") .. "/snippets" },
+    })
 
     cmp.setup({
       snippet = {
@@ -47,7 +50,6 @@ return {
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-y>"] = cmp.mapping.confirm({ select = true }),
 
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
         ["<Tab>"] = cmp.mapping.select_next_item(),
         ["<S-Tab>"] = cmp.mapping.select_prev_item(),
 
