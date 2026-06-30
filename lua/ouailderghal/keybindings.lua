@@ -26,15 +26,11 @@ map("v", "<C-k>", ":m '<-2<cr>gv=gv", opts)
 -- Stop highlight search
 map("n", "<Esc>", "<cmd>nohlsearch<cr>")
 
--- Easy split navigation
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-l>", "<C-w>l")
-map("n", "<C-j>", "<C-w>j")
-map("n", "<C-k>", "<C-w>k")
-
 -- Buffer navigation
-map("n", "<Tab>", ":bnext <CR>")
-map("n", "<S-Tab>", ":bprevious <CR>")
+map("n", "<Tab>", ":bnext<CR>")
+map("n", "<S-Tab>", ":bprevious<CR>")
+map("n", "<C-l>", ":bnext<CR>")
+map("n", "<C-h>", ":bprevious<CR>")
 map("n", "<leader>d", ":bd! <CR>")
 
 -- Reload config
