@@ -1,13 +1,13 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  cond = false,
-  lazy = true,
-  build = ":TSUpdate",
+  cond = true,
 
+  build = ":TSUpdate",
   ft = {
     "lua",
     "c",
     "cpp",
+    "bash",
     "sh",
     "go",
     "python",
@@ -15,9 +15,12 @@ return {
     "html",
     "javascript",
     "typescript",
-    "tex",
+    "yaml",
+    "json",
+    "dockerfile",
+    "java",
+    "make",
   },
-
 
   config = function()
     require("nvim-treesitter.configs").setup({
@@ -33,17 +36,14 @@ return {
         "html",
         "javascript",
         "typescript",
-        "latex",
+        "yaml",
+        "json",
+        "dockerfile",
+        "java",
+        "make",
       },
-
       highlight = { enable = true },
       indent = { enable = false },
-
-      playground = {
-        enable = true,
-        updatetime = 25,
-        persist_queries = false,
-      },
     })
   end,
 }
