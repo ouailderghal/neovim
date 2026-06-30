@@ -46,7 +46,6 @@ return {
             -- file & window operations
             ["s"] = "open_split",
             ["v"] = "open_vsplit",
-            ["t"] = "open_tabnew",
             ["q"] = "close_window",
             ["<esc>"] = "cancel",
 

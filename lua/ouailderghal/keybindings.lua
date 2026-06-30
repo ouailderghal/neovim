@@ -26,12 +26,6 @@ map("v", "<C-k>", ":m '<-2<cr>gv=gv", opts)
 -- Stop highlight search
 map("n", "<Esc>", "<cmd>nohlsearch<cr>")
 
--- Tab bindings 
-map("n", "<leader>t", ":tabnew<CR>")
-map("n", "<leader>x", ":tabclose<CR>")
-map("n", "<leader>j", ":tabprevious<CR>")
-map("n", "<leader>k", ":tabnext<CR>")
-
 -- Easy split navigation
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-l>", "<C-w>l")
